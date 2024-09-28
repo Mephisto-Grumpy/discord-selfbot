@@ -41,7 +41,7 @@ async function connectToVoiceChannel() {
       channelId: voiceChannel.id,
       guildId: guild.id,
       adapterCreator: guild.voiceAdapterCreator,
-      selfDeaf: false,
+      selfDeaf: true,
       selfMute: true
     })
 
