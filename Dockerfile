@@ -3,7 +3,7 @@ FROM node:22.9.0-alpine AS build
 WORKDIR /app
 COPY package.json pnpm-lock.yaml ./
 RUN npm install -g pnpm
-RUN pnpm install --prod
+RUN pnpm install --frozen-lockfile
 COPY . .
 
 # Stage 2: Run the application in a minimal environment
